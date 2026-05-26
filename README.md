@@ -1,3 +1,8 @@
-# Store Block course template
+# Countdown
 
-Here you'll learn how to create awesome Store Framework blocks!
+- [x] Repositório Git
+    - [x] Compartilhar com o Junior
+- [x] Mudar o vendor
+- [x] Rodar yarn i para instalar as dependências
+- [ ] Baixar react
+- [ ] Iniciar o desenvolvimento
