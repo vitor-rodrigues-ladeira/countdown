@@ -7,4 +7,5 @@
 - [x] Baixar react
 - [x] Baixar types/nodes
 - [x] Baixar vtex/tsconfig
+- [x] Baixar um tema
 - [ ] Iniciar o desenvolvimento
