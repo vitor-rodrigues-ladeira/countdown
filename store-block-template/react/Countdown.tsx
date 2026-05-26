@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { TimeSplit } from './typings/global'
-import { tick, getTwoDaysFromNow } from './utils/time'
+import { tick, getTwoDaysFromNow, formattedDate } from './utils/time'
 
 interface CountdownProps {
   targetDate: string
@@ -14,11 +14,11 @@ const Countdown: StorefrontFunctionComponent<CountdownProps> = ({ targetDate = D
     minutes: '00',
     seconds: '00'
   })
-
+  const formatted = formattedDate(targetDate)
   tick(targetDate, setTime)
 
   return (
-    <div><h1>{timeRemaining.hours}:{timeRemaining.minutes}:{timeRemaining.seconds}</h1> <span>Data final: {targetDate}</span></div>
+    <div><h1>{timeRemaining.hours}:{timeRemaining.minutes}:{timeRemaining.seconds}</h1> <span>Data final: {formatted}</span></div>
   )
 }
 
@@ -31,6 +31,7 @@ Countdown.schema = {
       title: 'Data final',
       description: 'Data final utilizada no contador.',
       type: 'string',
+      format: 'date',
       default: null
     }
   },

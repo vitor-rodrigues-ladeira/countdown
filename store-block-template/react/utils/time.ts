@@ -26,6 +26,11 @@ export const parseTimeRemaining = (totalSeconds: number): TimeSplit => {
   }
 }
 
+export const formattedDate = (targetDate: string): string  => {
+  const [year, month, day] = targetDate.split('T')[0].split('-')
+  return `${day}/${month}/${year}`
+}
+
 /**
  *
  * @param targetDate ISOString for the date that the countdown will expire
