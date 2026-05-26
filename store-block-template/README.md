@@ -12,4 +12,6 @@
 - [ ] Componente Countdown
     - [x] Ao invés de puxar release date do produto, a data terá de ser editável pelo site editor, usando schema
     - [x] Mostrar a data final(inserida no site editor) formatada
-    - [ ] Pesquisar sobre setTimeout e entender completamente a lógica do tick()
+    - [x] Pesquisar sobre setTimeout e entender completamente a lógica do tick()
+    - [ ] Mostrar para o Junior
+- [ ] Slide de produtos que ao chegarem até certa data, o produto desaparece
