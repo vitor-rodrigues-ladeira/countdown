@@ -1,5 +1,5 @@
 {
-  "vendor": "vtex",
+  "vendor": "ladeirabijuteriashomolog",
   "name": "store-theme",
   "version": "5.2.0",
   "builders": {
@@ -63,9 +63,6 @@
     "vtex.tab-layout": "0.x",
     "vtex.condition-layout": "2.x",
     "vtex.css-handles": "1.x"
-  },
-  "peerDependencies": {
-    "vtex.reviews-and-ratings": "3.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
