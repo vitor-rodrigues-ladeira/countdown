@@ -4,9 +4,7 @@ const SECONDS_IN_MINUTE = 60
 const SECONDS_IN_HOUR = 60 * SECONDS_IN_MINUTE
 
 const fillWithZero = (digits: number, number: number): string => {
-  const filled = `${'0'.repeat(digits - 1)}${number}`
-
-  return filled.slice(filled.length - digits)
+  return String(number).padStart(digits, '0')
 }
 
 export const parseTimeRemaining = (totalSeconds: number): TimeSplit => {
