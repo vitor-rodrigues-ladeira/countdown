@@ -16,5 +16,8 @@
     - [x] Fazer tratativa para todos os cenários
         - [x] Tratativa caso o dia final seja anterior ao dia atual
         - [x] Tratativa caso as horas tenham mais de 2 caracteres
+        - [x] Testar
+        - [x] Mostrar para o Junior
+    - [ ] Função que mostra quantos dias até a oferta expirar
     - [ ] Mostrar para o Junior
 - [ ] Slide de produtos que ao chegarem até certa data, o produto desaparece
