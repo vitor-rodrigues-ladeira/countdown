@@ -13,5 +13,8 @@
     - [x] Ao invés de puxar release date do produto, a data terá de ser editável pelo site editor, usando schema
     - [x] Mostrar a data final(inserida no site editor) formatada
     - [x] Pesquisar sobre setTimeout e entender completamente a lógica do tick()
+    - [x] Fazer tratativa para todos os cenários
+        - [x] Tratativa caso o dia final seja anterior ao dia atual
+        - [x] Tratativa caso as horas tenham mais de 2 caracteres
     - [ ] Mostrar para o Junior
 - [ ] Slide de produtos que ao chegarem até certa data, o produto desaparece
