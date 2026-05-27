@@ -24,7 +24,7 @@ export const parseTimeRemaining = (totalSeconds: number): TimeSplit => {
   }
 }
 
-export const formattedDate = (targetDate: string): string  => {
+export const formattedDate = (targetDate: string): string => {
   const [year, month, day] = targetDate.split('-')
   return `${day}/${month}/${year}`
 }
@@ -45,8 +45,8 @@ export const tick = (
   const secondsLeft =
     (finalDate.getTime() - now.getTime()) / ONE_SECOND_IN_MILLIS
 
-  if(secondsLeft <= 0){
-    dispatchFn({hours: '00', minutes: '00', seconds: '00'})
+  if (secondsLeft <= 0) {
+    dispatchFn({ hours: '00', minutes: '00', seconds: '00' })
     return
   }
 
