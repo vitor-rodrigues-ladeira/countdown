@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
+import {useCssHandles } from 'vtex.css-handles'
 import { TimeSplit } from './typings/global'
 import { tick, getTwoDaysFromNow, formattedDate } from './utils/time'
 
@@ -6,6 +7,7 @@ interface CountdownProps {
   targetDate: string
 }
 
+const CSS_HANDLES = ['countdown']
 const DEFAULT_TARGET_DATE = getTwoDaysFromNow()
 
 const Countdown: StorefrontFunctionComponent<CountdownProps> = ({ targetDate = DEFAULT_TARGET_DATE }) => {
@@ -14,6 +16,8 @@ const Countdown: StorefrontFunctionComponent<CountdownProps> = ({ targetDate = D
     minutes: '00',
     seconds: '00'
   })
+
+  const handles = useCssHandles(CSS_HANDLES)
   const formatted = formattedDate(targetDate)
 
   useEffect(() => {
@@ -22,7 +26,7 @@ const Countdown: StorefrontFunctionComponent<CountdownProps> = ({ targetDate = D
   //tick(targetDate, setTime)
 
   return (
-    <div><h1>{timeRemaining.hours}:{timeRemaining.minutes}:{timeRemaining.seconds}</h1> <span>Data final: {formatted}</span></div>
+    <div className={`${handles.countdown}c-muted-1 tc`}><h1>{timeRemaining.hours}:{timeRemaining.minutes}:{timeRemaining.seconds}</h1> <span>Data final: {formatted}</span></div>
   )
 }
 
