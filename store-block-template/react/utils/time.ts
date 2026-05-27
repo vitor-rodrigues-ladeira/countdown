@@ -55,6 +55,15 @@ export const tick = (
   }, ONE_SECOND_IN_MILLIS)
 }
 
+export const dayCount = (hours: string) => {
+  const total = Math.floor(Number(hours))
+  const day = Math.floor(total/24)
+  const leftHours = total %  24
+  const leftMin = leftHours % 60
+  const leftSec = leftMin % 60
+  return `${day}d: ${leftHours}:h ${leftMin}:m ${leftSec}:s`
+}
+
 export const getTwoDaysFromNow = () => {
   const today = new Date()
 
