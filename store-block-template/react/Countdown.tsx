@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { TimeSplit } from './typings/global'
 import { tick, getTwoDaysFromNow, formattedDate } from './utils/time'
 
@@ -15,7 +15,10 @@ const Countdown: StorefrontFunctionComponent<CountdownProps> = ({ targetDate = D
     seconds: '00'
   })
   const formatted = formattedDate(targetDate)
-  tick(targetDate, setTime)
+  
+  useEffect(() => {
+    tick(targetDate, setTime)
+  }, [targetDate])
 
   return (
     <div><h1>{timeRemaining.hours}:{timeRemaining.minutes}:{timeRemaining.seconds}</h1> <span>Data final: {formatted}</span></div>
