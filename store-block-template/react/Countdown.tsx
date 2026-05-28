@@ -30,14 +30,35 @@ const Countdown: StorefrontFunctionComponent<CountdownProps> = ({ targetDate = D
     return (
       <div className={`${handles.countdown}c-muted-1 tc`}><h1>Oferta expirada</h1> <span>Data final: {formatted}</span></div>
     )
+  } else if (timeRemaining.days == '0' && timeRemaining.hours != '00') {
+    return (
+      <div className={`${handles.countdown}c-muted-1 tc`}>
+        <h1>{timeRemaining.hours}h : {timeRemaining.minutes}m : {timeRemaining.seconds}s</h1>
+        <p>Data final: {formatted}</p>
+      </div>
+    )
+  } else if (timeRemaining.days == '0' && timeRemaining.hours == '00' && timeRemaining.minutes != '00') {
+    return (
+      <div className={`${handles.countdown}c-muted-1 tc`}>
+        <h1>{timeRemaining.minutes}m : {timeRemaining.seconds}s</h1>
+        <p>Data final: {formatted}</p>
+      </div>
+    )
+  } else if (timeRemaining.days == '0' && timeRemaining.hours == '00' && timeRemaining.minutes == '00' && timeRemaining.seconds != '00') {
+    return (
+      <div className={`${handles.countdown}c-muted-1 tc`}>
+        <h1>{timeRemaining.seconds}s</h1>
+        <p>Data final: {formatted}</p>
+      </div>
+    )
+  } else {
+    return (
+      <div className={`${handles.countdown}c-muted-1 tc`}>
+        <h1>{timeRemaining.days}d : {timeRemaining.hours}h : {timeRemaining.minutes}m : {timeRemaining.seconds}s</h1>
+        <p>Data final: {formatted}</p>
+      </div>
+    )
   }
-
-  return (
-    <div className={`${handles.countdown}c-muted-1 tc`}>
-      <h1>{timeRemaining.days}d : {timeRemaining.hours}h : {timeRemaining.minutes}m : {timeRemaining.seconds}s</h1>
-      <p>Data final: {formatted}</p>
-    </div>
-  )
 }
 
 Countdown.schema = {
