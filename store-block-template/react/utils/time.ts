@@ -8,16 +8,14 @@ const fillWithZero = (digits: number, number: number): string => {
 }
 
 export const parseTimeRemaining = (totalSeconds: number): TimeSplit => {
-  const hours = Math.floor(totalSeconds / SECONDS_IN_HOUR)
-  const minutes = Math.floor(
-    (totalSeconds % SECONDS_IN_HOUR) / SECONDS_IN_MINUTE
-  )
-
-  const seconds = Math.floor(
-    (totalSeconds % SECONDS_IN_HOUR) % SECONDS_IN_MINUTE
-  )
+  const days = Math.floor(totalSeconds / (SECONDS_IN_HOUR * 24))
+  const hours = Math.trunc(Math.floor(totalSeconds % (SECONDS_IN_HOUR * 24)) / SECONDS_IN_HOUR)
+  const minutes = Math.floor((totalSeconds % SECONDS_IN_HOUR) / SECONDS_IN_MINUTE)
+  const seconds = Math.floor((totalSeconds % SECONDS_IN_HOUR) % SECONDS_IN_MINUTE)
+  //sconsole.log(`${days} -- ${hours} -- ${minutes} -- ${seconds}`)
 
   return {
+    days: fillWithZero(1, days),
     hours: fillWithZero(2, hours),
     minutes: fillWithZero(2, minutes),
     seconds: fillWithZero(2, seconds),
@@ -46,22 +44,13 @@ export const tick = (
     (finalDate.getTime() - now.getTime()) / ONE_SECOND_IN_MILLIS
 
   if (secondsLeft <= 0) {
-    dispatchFn({ hours: '00', minutes: '00', seconds: '00' })
+    dispatchFn({ days: '0', hours: '00', minutes: '00', seconds: '00' })
     return
   }
 
   setTimeout(() => {
     dispatchFn(parseTimeRemaining(secondsLeft))
   }, ONE_SECOND_IN_MILLIS)
-}
-
-export const dayCount = (hours: string) => {
-  const total = Math.floor(Number(hours))
-  const day = Math.floor(total/24)
-  const leftHours = total %  24
-  const leftMin = leftHours % 60
-  const leftSec = leftMin % 60
-  return `${day}d: ${leftHours}:h ${leftMin}:m ${leftSec}:s`
 }
 
 export const getTwoDaysFromNow = () => {
