@@ -19,6 +19,6 @@
         - [x] Testar
         - [x] Mostrar para o Junior
     - [x] Atualizar a função utilitária tick e parseTimeRemaining para mostrar a quantidade de dias até a oferta expirar
-    - [ ] Fazer com que se zerar o dia, hora ou minuto, esse campo sumam da contagem
-    - [ ] Mostrar para o Junior
+    - [x] Fazer com que se zerar o dia, hora ou minuto, esse campo sumam da contagem
+    - [x] Mostrar para o Junior
 - [ ] Slide de produtos que ao chegarem até certa data, o produto desaparece
