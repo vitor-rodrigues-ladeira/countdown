@@ -24,7 +24,6 @@ const Countdown: StorefrontFunctionComponent<CountdownProps> = ({ targetDate = D
   useEffect(() => {
     tick(targetDate, setTime)
   }, [timeRemaining])
-  //tick(targetDate, setTime)
 
   if (timeRemaining.days == '0' && timeRemaining.hours == '00' && timeRemaining.minutes == '00' && timeRemaining.seconds == '00') {
     return (
