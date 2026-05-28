@@ -18,6 +18,7 @@
         - [x] Tratativa caso as horas tenham mais de 2 caracteres
         - [x] Testar
         - [x] Mostrar para o Junior
-    - [ ] Função que mostra quantos dias até a oferta expirar
+    - [x] Atualizar a função utilitária tick e parseTimeRemaining para mostrar a quantidade de dias até a oferta expirar
+    - [ ] Fazer com que se zerar o dia, hora ou minuto, esse campo sumam da contagem
     - [ ] Mostrar para o Junior
 - [ ] Slide de produtos que ao chegarem até certa data, o produto desaparece
