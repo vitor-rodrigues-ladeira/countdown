@@ -69,7 +69,7 @@ Countdown.schema = {
       title: 'Data final',
       description: 'Data final utilizada no contador.',
       type: 'string',
-      format: 'date',
+      format: 'date-time',
       default: null
     }
   },

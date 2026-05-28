@@ -24,7 +24,8 @@ export const parseTimeRemaining = (totalSeconds: number): TimeSplit => {
 
 export const formattedDate = (targetDate: string): string => {
   const [year, month, day] = targetDate.split('-')
-  return `${day}/${month}/${year}`
+  const dayH = day.split('T')
+  return `${dayH[0]}/${month}/${year}`
 }
 
 /**
