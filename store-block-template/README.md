@@ -22,7 +22,7 @@
     - [x] Fazer com que se zerar o dia, hora ou minuto, esse campo sumam da contagem
     - [x] Mostrar para o Junior
 - [ ] Slider de produtos que ao chegar a data final do countdown, a vitrine desaparece
-    - [ ] Fazer o slider
+    - [x] Fazer o slider
     - [ ] Vincular Componente Countdown ao Slider
         - [ ] Passar children como prop do Countdown
     - [ ] Testar
